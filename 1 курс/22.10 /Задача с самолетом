@@ -1,0 +1,39 @@
+#include <iostream>
+#include<cmath>
+#include<iomanip>
+
+using namespace std;
+int main()
+{
+    int h, t, v, x;
+    cin >> h >> t >> v >> x;
+    double minTime, maxTime;
+
+    if (x == 0)
+    {
+        cout << 0 << endl;
+        cout << 0 << endl;
+        return 0;
+    }
+
+    if (h / t <= x)
+    {
+        minTime = 0;
+        maxTime = h / x;
+    }
+
+    else
+    {
+        double minWayWithoutGildedEars = (t * v * x - h * v) / (x - v);
+        minTime = minWayWithoutGildedEars / v;
+        maxTime = t;
+    }
+
+    cout << fixed << setprecision(6) << minTime << endl;
+    cout << fixed << setprecision(6) << maxTime << endl;
+
+    // не понимаю почему у меня точночть неправильная. 
+    // только из-за этого тесты не проходит.
+    // ноль идей как пофиксить
+    // а так считаю что алгоритм верный
+}
