@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int digit1 = n % 10;
+    int digit2 = n / 100;
+    int digit3 = n / 10 % 10;
+
+    int product = digit1 * digit2 * digit3;
+
+    cout << product << endl;
+
+}
