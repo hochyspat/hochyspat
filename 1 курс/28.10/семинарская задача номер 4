@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // a <= b; c <= d
+    // a <= c; b <= d
+    double a, b, c, d;
+    cin >> a >> b;
+    cin >> c >> d;
+
+    if ((c < a && b < d) || (a < c && d < b))
+        cout << min(a, c) << " " << max(b, d);
+    else if (b < c && b < d)
+        cout << "No intersection" << endl;
+    else if (a == c && b == d)
+        cout << a << " " << b << endl;
+    else if (b == c)
+        cout << b << endl;
+    else
+        cout << c << " " << b << endl;
+}
