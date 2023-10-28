@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    double array1[5]{};
+    int array1[5]{};
     set<int> num{};
 
     for (int i = 0; i < size(array1); ++i)
