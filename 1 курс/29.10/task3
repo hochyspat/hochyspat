@@ -1,1 +1,28 @@
+#include <iostream>
+#include <string>
 
+using namespace std;
+
+int main()
+{
+    string array1[5]{};
+    int count = 0;
+
+    for (int i = 0; i < size(array1); ++i)
+        cin >> array1[i];
+
+    for (int i = 0; i < size(array1); ++i)
+    {
+        string temp = array1[i];
+        reverse(array1[i].begin(), array1[i].end());
+
+        if (array1[i] == temp)
+        {
+            cout << array1[i] << endl;
+            count++;
+        }
+    }
+
+    if (count == 0)
+        cout << "no word";
+}
