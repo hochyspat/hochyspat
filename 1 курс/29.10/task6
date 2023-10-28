@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main()
+{
+    double array1[5];
+    double maxx = 0;
+    double minn = 10000000;
+    int maxIndex = 0;
+    int minIndex = 0;
+    for (int i = 0; i < size(array1); ++i)
+    {
+        cin >> array1[i];
+        if (array1[i] > maxx)
+        {
+            maxx = array1[i];
+            maxIndex = i;
+        }
+
+        if (array1[i] < minn) 
+        {
+            minn = array1[i];
+            minIndex = i;
+        }
+    }
+
+    double temp = array1[maxIndex];
+    array1[maxIndex] = array1[minIndex];
+    array1[minIndex] = temp;
+
+    for (int i = 0; i < size(array1); ++i)
+        cout << array1[i] << " ";
+}
