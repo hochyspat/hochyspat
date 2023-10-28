@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main()
+{
+    double array1[5];
+    double maxx = 0;
+    for (int i = 0; i < size(array1); ++i)
+    {
+        cin >> array1[i];
+        maxx = max(maxx, array1[i]);
+    }
+
+    for (int i = 0; i < size(array1); ++i)
+        cout << array1[i] / maxx << endl;
+}
