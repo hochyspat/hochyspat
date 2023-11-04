@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int countDigits(int n)
+{
+    int count = 0;
+    while (n > 0)
+    {
+        count++;
+        n /= 10;
+    }
+    return count;
+}
+
+double digits(int n, int k)
+{
+    double result = n / (int)pow(10, countDigits(n) - k);
+    return result;
+}
+
+int main()
+{
+    int n, k; 
+    // k > 0, рязрядность n > k
+    cin >> n >> k;
+    cout << digits(n, k);
+}
