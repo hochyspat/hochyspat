@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+    double x;
+    cout << "Ведите x: ";
+    cin >> x;
+    double yNew = x, yLast;
+    while (true) {
+        yLast=yNew;
+        yNew=0.5*(yLast+3*x/(2*yLast*yLast + x/yLast));
+        if (abs(yNew - yLast)<1.0/100000){
+            break;
+        }
+    }
+    cout << yNew;
+    return 0;
+}
