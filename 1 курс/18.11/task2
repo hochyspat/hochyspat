@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int nod = 0;
+    int M, N, gor, ver;
+    cin >> M >> N;
+    ver=M-1;
+    gor=N-1;
+    int i = 0;
+    for (i = 1; i <= min(gor, ver); i++) 
+    {
+        if (gor % i == 0 && ver % i == 0)
+            nod = i;
+    }
+    cout << gor+ver-nod;
+}
