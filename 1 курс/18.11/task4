@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, a, b, c, ai, bi, ci;
+	cin >> n;
+	int* ans = new int[n] {0};
+	for (int i = 0; i < n + 1; ++i)
+	{
+		cin >> a >> b >> c;
+		ans[a - 1] += c;
+		ans[b] -= c;
+	}
+	int summ = 0;
+	for (int i = 0; i < n; ++i)
+	{
+		summ += ans[i];
+		cout << summ << " ";
+	}
+}
