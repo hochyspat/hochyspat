@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    long long r;
+    cin >> r;
+    long long c = 0;
+    for (long long i = 0; i < r; i++) {
+        c += ceil(sqrt(r * r - i * i));
+    }
+    cout << c * 4;
+    return 0;
+}
