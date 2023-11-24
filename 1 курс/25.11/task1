@@ -1,0 +1,86 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+//Создание и добавление записи в файл
+int main()
+{
+	ofstream MyFile("cpp.txt");
+	MyFile << "Hello, world!";
+	MyFile.close();
+}
+
+//Удаление записи
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string line, exstraLine;
+	ofstream EditFile;
+	ifstream MyFile;
+	cin >> exstraLine;
+	MyFile.open("cpp.txt");
+	EditFile.open("cpp_edit.txt");
+	if (MyFile.is_open())
+	{
+		while (getline(MyFile, line))
+		{
+			if (line != exstraLine)
+				EditFile << line << endl;
+		}
+	}
+	MyFile.close();
+	EditFile.close();
+}
+
+//Изменение записей
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string line, theLine, editLine;
+	ofstream EditFile;
+	ifstream MyFile;
+	cin >> theLine;
+	cin >> editLine;
+	MyFile.open("cpp.txt");
+	EditFile.open("cpp_edit.txt");
+	if (MyFile.is_open())
+	{
+		while (getline(MyFile, line))
+		{
+			if (line != theLine)
+				EditFile << line << endl;
+			else
+				EditFile << editLine << endl;
+		}
+	}
+	MyFile.close();
+	EditFile.close();
+}
+
+//Вывод содержимого файла на экран
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string line;
+	ifstream MyFile;
+	MyFile.open("cpp.txt");
+	if (MyFile.is_open())
+	{
+		while (getline(MyFile, line))
+		{
+			cout << line << endl;
+		}
+	}
+	MyFile.close();
+}
