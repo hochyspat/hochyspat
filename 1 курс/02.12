@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	int a, c, b, d;
+	cin >> a >> b >> c >> d;
+	if (a == c)
+	{
+		cout << a;
+		return 0;
+	}
+	if (b >= d)
+	{
+		int dif = c - d * ((c - a) / (b + d));
+		cout << dif;
+	}
+	else
+	{
+		int cel = ceil((double)(c - a) / (b + d));
+		int dif = a + b * cel;
+		cout << dif;
+	}
