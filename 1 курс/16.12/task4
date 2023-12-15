@@ -1,4 +1,4 @@
-#include <iostream> 
+#include <iostream>  
 
 using namespace std;
 
@@ -14,7 +14,7 @@ int main()
     for (int i = 0; i < n; ++i)
     {
         if ('0' <= *(str + i) <= '9')
-            digitCount[(int)*(str + i) - '0']++;
+            digitCount[*(str + i) - '0']++;
     }
     int maxValue = 0;
     int maxIndex = 0;
