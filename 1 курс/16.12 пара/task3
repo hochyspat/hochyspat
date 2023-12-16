@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() 
+{
+    vector<double> Vector = { 4, 4, 4, 4, 4};
+    int summ = 0;
+    for (int i = 0; i < 5; ++i)
+        summ += Vector[i];
+    double middleValue = summ / 5;
+    const auto deleteObject = remove(Vector.begin(), Vector.end(), middleValue);
+    Vector.erase(deleteObject, Vector.end());
+    for (auto num : Vector)
+        cout << num << " ";
+}
