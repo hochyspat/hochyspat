@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Enter value" << endl;
+	int value;
+	cin >> value;
+	int ans = 1;
+	for (int i = 1; i < value + 1; ++i)
+		ans *= i;
+	cout << ans;
+}
