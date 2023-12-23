@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Enter date" << endl;
+	int day, month;
+	cin >> day >> month;
+	int ans = 0;
+	if (month > 2)
+	{
+		if (month % 2 == 0)
+			ans = (12 - month) / 2 * 30 + (12 - month) / 2 * 31 + (31 - day);
+		else if (month % 2 != 0)
+			ans = (12 - month) / 2 * 30 + ((12 - month) / 2 + 1) * 31 + (30 - day);
+		cout << ans;
+	}
+	else
+	{
+		if (month % 2 == 0)
+			ans = (12 - month) / 2 * 30 + (12 - month) / 2 * 31 + (28 - day);
+		else if (month % 2 != 0)
+			ans = (12 - month) / 2 * 30 + ((12 - month) / 2) * 31 + (31 - day) + 28;
+		cout << ans;
+	}
+	
+}
