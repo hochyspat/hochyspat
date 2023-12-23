@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Enter date: year-month-day" << endl;
+	string date;
+	cin >> date;
+	int count = 0;
+	for (auto sym : date)
+	{
+		if (sym == '-')
+			count++;
+	}
+	if (count != 2)
+		cout << "wrong format";
+	else
+		cout << "ok";
+}
