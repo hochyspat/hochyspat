@@ -1,20 +1,38 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
-int main() 
+int main()
 {
 	cout << "Enter date: year-month-day" << endl;
 	string date;
 	cin >> date;
-	int count = 0;
-	for (auto sym : date)
+	string year = date.substr(0, date.find('-'));
+	string month = date.substr(date.find('-') + 1, date.rfind('-') - date.find('-') - 1);
+	string day = date.substr(date.rfind('-') + 1, date.size() - date.rfind('-'));
+	bool flag = false;
+	int sum = 0;
+	for (auto sym : year)
 	{
-		if (sym == '-')
-			count++;
+		if ('0' <= sym && sym <= '9')
+			sum += sym;
+		else
+			flag = true;
 	}
-	if (count != 2)
-		cout << "wrong format";
-	else
-		cout << "ok";
+	if (flag)
+	{
+		cout << "wrong";
+		return 0;
+	}
+	if (month[0] > '1' || (month[0] == '1' && month[1] > '2'))
+	{
+		cout << "wrong";
+		return 0;
+	}
+	if (day[0] > '3' || (day[0] == '3' && day[1] > '1'))
+	{
+		cout << "wrong";
+		return 0;
+	}
+	cout << "ok";
 }
