@@ -1,0 +1,12 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int b;
+    cin >> b;
+    cout << "количество гигабайт: " << b / 1024 / 1024 / 1024;
+    cout << "количество мегабайт: " << b / 1024 / 1024;
+    cout << "количество килобайт: " << b / 1024;
+}
