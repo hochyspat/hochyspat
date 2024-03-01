@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int summ = 0;
+    for (int i = 1; i < 101; ++i)
+        summ += i * i;
+    cout << summ;
+}
