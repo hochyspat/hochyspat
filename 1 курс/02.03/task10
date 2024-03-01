@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	char chr1 = '1';
+	char chr2 = '2';
+	char chr3 = '3';
+	char chr4 = '4';
+	char chr5 = '5';
+	string word{ chr1, chr2, chr3, chr4, chr5 };
+	int number = stoi(word);
+	cout << number;
+}
