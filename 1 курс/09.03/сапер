@@ -1,0 +1,44 @@
+для игры в сапер нам понадобятся классы:
+..
+игра
+игрок
+поле
+бомба
+..
+для организации классов нам понадобятся файлы хедеры для каждого класса и файлы .cpp для реализации методов.
+..
+Game.h - Game.cpp
+Player.h - Player.cpp
+Field.h - Field.cpp
+Bomb.h - Bomb.cpp
+..
+
+Player.h:
+  class Player {
+  public:
+  	int** Click(); // игрок нажимает на клетку
+  	int** FlagPlacement();//размещение флага
+  };
+
+Field.h:
+  class Field {
+  private:
+  	int BombCount; //количество бомб на поле
+  public:
+  	int** FieldMaker(); //конструктор поля
+  };
+
+Bomb.h:
+  class Bomb {
+  public:
+  	void Boom(); //взрыв бомбы
+  };
+
+Game.h
+  class Game {
+  	int timer;
+  	Field field;
+  	Player player;
+  public:
+  	
+  };
